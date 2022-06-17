@@ -36,7 +36,7 @@
         </div>
 
         <!-- Edit Modal -->
-        <b-modal id="edit-customer" title="Edit Customer">
+        <b-modal id="edit-customer" title="Edit Customer" hide-footer>
             <b-form @submit.prevent="handleEditCustomerForm">
                 <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
                     <b-form-input id="input-2" v-model="customer.name" placeholder="Enter name" required></b-form-input>
@@ -127,4 +127,5 @@ export default {
 button {
     margin: 6px;
 }
+
 </style>

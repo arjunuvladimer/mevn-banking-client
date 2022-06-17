@@ -5,8 +5,8 @@
           <a class="navbar-brand float-left">BANKING APP</a>
           <ul class="nav navbar-nav flex-row">
 
-            <li class="nav-item">
-              <router-link class="nav-link pr-3" to="/">Home</router-link>
+            <li class="active nav-item">
+              <router-link class="active nav-link pr-3" to="/">Home</router-link>
             </li>
            
             <li class="nav-item">
@@ -37,5 +37,10 @@ export default {
 </script>
 
 <style>
-
+.navbar-nav > li{
+  padding-left: 10px;
+}
+.navbar-dark .nav-item > .nav-link.active{
+  color:white;
+}
 </style>
