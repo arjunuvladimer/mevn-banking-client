@@ -57,7 +57,24 @@ export default {
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        alert(JSON.stringify(this.customer))
+        let apiUrl = "http://localhost:8081/api/banking/addCustomer"
+
+        // Axios 
+        axios.post(apiUrl, this.customer)
+        .then(() => {
+             this.$router.push("/customers")
+             this.customer = {
+                name: '',
+                address: '',
+                mobile: '',
+                email: '',
+                password: ''
+             }
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+        
       },
       onReset(event) {
         event.preventDefault()
